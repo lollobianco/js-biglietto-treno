@@ -29,6 +29,8 @@ function ticketPrice(){
       finalPrice = (0.21 * userKm);
       console.log('paghi il prezzo pieno: ', finalPrice,'EURO')
    }
+
+   document.getElementById ('price').innerHTML = `Il prezzo del tuo biglietto è di: ${finalPrice.toFixed(2)}€`;
    
 }
 
