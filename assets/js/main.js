@@ -5,3 +5,31 @@
 // va applicato uno sconto del 40% per gli over 65.
 // L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 
+
+function ticketPrice(){
+   let userKm = parseFloat(document.getElementById("km").value);
+   let userAge = parseInt(document.getElementById("age").value);
+   const price = 0.21;
+   let finalPrice;
+
+   console.log(userKm)
+   console.log(userAge) 
+
+   if (userAge < 18){
+      finalPrice = (0.21 * userKm);
+      finalPrice = finalPrice - (finalPrice * 20)/100; 
+      console.log('prezzo scontato del 20%: ', finalPrice)
+   
+   } else if (userAge > 65){
+      finalPrice = (0.21 * userKm);
+      finalPrice = finalPrice - (finalPrice * 40)/100;
+      console.log('prezzo scontato del 40%: ', finalPrice,'EURO')
+   
+   } else{
+      finalPrice = (0.21 * userKm);
+      console.log('paghi il prezzo pieno: ', finalPrice,'EURO')
+   }
+   
+}
+
+
