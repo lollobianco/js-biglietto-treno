@@ -17,20 +17,21 @@ function ticketPrice(){
 
    if (userAge < 18){
       finalPrice = (0.21 * userKm);
-      finalPrice = finalPrice - (finalPrice * 20)/100; 
+      finalPrice = finalPrice - (finalPrice * 20)/100;
+      document.getElementById ('price').innerHTML = `Il prezzo del tuo biglietto è di ${finalPrice.toFixed(2)}€ (20% di sconto)`; 
       console.log('prezzo scontato del 20%: ', finalPrice)
    
    } else if (userAge > 65){
       finalPrice = (0.21 * userKm);
       finalPrice = finalPrice - (finalPrice * 40)/100;
+      document.getElementById ('price').innerHTML = `Il prezzo del tuo biglietto è di ${finalPrice.toFixed(2)}€ (40% di sconto)`;
       console.log('prezzo scontato del 40%: ', finalPrice,'EURO')
    
    } else{
       finalPrice = (0.21 * userKm);
+      document.getElementById ('price').innerHTML = `Il prezzo del tuo biglietto è di ${finalPrice.toFixed(2)}€`;
       console.log('paghi il prezzo pieno: ', finalPrice,'EURO')
    }
-
-   document.getElementById ('price').innerHTML = `Il prezzo del tuo biglietto è di: ${finalPrice.toFixed(2)}€`;
    
 }
 
